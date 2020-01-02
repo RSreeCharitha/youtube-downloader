@@ -1,8 +1,11 @@
-#python
 from pytube import YouTube
+import sys
 
-url = 'https://youtu.be/Eyx0Hvi1_Ng?list=TLPQMjgxMjIwMTk50FBhBFN9Og'
-url = 'https://www.youtube.com/watch?v=9bZkp7q19f0'  #Gagnam Style
+url = sys.argv[1]
+
+#url = 'https://youtu.be/Eyx0Hvi1_Ng?list=TLPQMjgxMjIwMTk50FBhBFN9Og'
+#url = 'https://www.youtube.com/watch?v=9bZkp7q19f0'  #Gagnam Style
+#url ='https://www.youtube.com/watch?v=EAJCr5vvYz0'
 yt = YouTube(url)
 print('Title: ' + yt.title)
 
@@ -17,8 +20,8 @@ print('\n\n')
 #yt.streams[1].download()
 #print(yt.streams.first())
 print(type(res[1]))
-#print('\n\n Downloading \n\n')
-#res[1].download()
+print('\n\n Downloading \n\n')
+res[1].download()
 
 #down = <Stream: itag="137" mime_type="video/mp4" res="1080p" fps="30fps" vcodec="avc1.640028" acodec="mp4a.40.2">
 #down = res[1]
